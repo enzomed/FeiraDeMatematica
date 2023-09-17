@@ -1,0 +1,129 @@
+import cv2
+import tkinter as tk
+from tkinter import *
+import random
+import PIL
+from PIL import Image,ImageTk
+from tkinter import ttk
+from tkinter.ttk import Label
+
+##IMPORTANTE (LEIA POR FAVOR): AS IMAGENS NÃO SERÃO MOSTRADAS, POIS É NECESSÁRIO QUE MUDE O CAMINHO DELAS NO SEU
+#COMPUTADOR.
+
+##Não estive muito preocupado em fazer as 8 funções para as perguntas, pois é só a versão beta.
+
+##Definição de variáveis:
+pergunta = random.randint(1,3)
+global_image_list = ['C:/Users/Nathaen/Downloads/mathchalkboard.webp','C:/Users/Nathaen/Downloads/Trollface.png']
+
+
+## Janela principal do programa, introdução.
+janelaprincipal = tk.Tk()
+imagemprincipal = cv2.imread('C:/Users/Nathaen/Downloads/mathchalkboard.webp')
+im = Image.fromarray(imagemprincipal)
+imgtk = ImageTk.PhotoImage(image=im)
+janelaprincipal.title('Projeto Feira (VERSÃO BETA)')
+janelaprincipal.geometry('1366x768')
+
+texto1 = Label(janelaprincipal, text='Bem vindo ao Projeto da Feira de Matemática!')
+texto2 = Label(janelaprincipal, text='Um projeto realizado pela turma do 3°B!')
+
+Label(janelaprincipal,image=imgtk).pack()
+texto1.pack(ipadx=10,ipady=10)
+texto2.pack(ipadx=10,ipady=20)
+
+##Definição de funções:
+
+##Função pergunta 1:
+def pergunta1():
+    perguntas0 =[pergunta2, pergunta3]
+    janela1 = tk.Tk()
+    janela1.title('Pergunta 1')
+    janela1.geometry('1366x768')
+    imagem1 = ImageTk.PhotoImage(file='C:/Users/Nathaen/Downloads/Trollface.png',master=janela1)
+    lbimagem1 = Label(janela1, image=imagem1)
+    lbimagem1.pack()
+    button2 = tk.Button(janela1,text='Clique para ver a próxima pergunta.',command=random.choice(perguntas0))
+    button2.pack()
+    janela1.mainloop()
+##Função pergunta 2:
+def pergunta2():
+    perguntas1 =[pergunta1, pergunta3]
+    janela2 = tk.Tk()
+    janela2.title('Pergunta 2')
+    janela2.geometry('1366x768')
+    imagem2 = ImageTk.PhotoImage(file='C:/Users/Nathaen/Downloads/memeface1.png',master=janela2)
+    lbimagem2 = Label(janela2, image=imagem2)
+    lbimagem2.pack()
+    button3 = tk.Button(janela2,text='Clique para ver a próxima pergunta.',command=random.choice(perguntas1))
+    button3.pack()
+    janela2.mainloop()
+##Função pergunta 3:
+def pergunta3():
+    perguntas2 = [pergunta1, pergunta2]
+    janela3 = tk.Tk()
+    janela3.title('Pergunta 3')
+    janela3.geometry('1366x768')
+    imagem3 = ImageTk.PhotoImage(file='C:/Users/Nathaen/Downloads/rockmanx.jpg',master=janela3)
+    lbimagem3 = Label(janela3, image=imagem3)
+    lbimagem3.pack()
+    button4 = tk.Button(janela3,text='Clique para ver a próxima pergunta.',command=random.choice(perguntas2))
+    button4.pack()
+    janela3.mainloop()
+
+
+##Função do botão de início (tela inicial):
+def firstbuttoncallback():
+    pergunta = random.randint(1,3)
+    if pergunta == 1:
+        pergunta1()
+    elif pergunta == 2:
+        pergunta2()
+    elif pergunta == 3:
+        pergunta3()
+
+def creditos():
+    janelacreditos = tk.Tk()
+    janelacreditos.title('Créditos')
+    janelacreditos.geometry('1366x768')
+    textocreditos = Label(janelacreditos,text='Criação do modelo do código feita por Enzo F.')
+    textocreditos1 = Label(janelacreditos,text="Equipe de programação: Enzo Fernandes, Kleber Rogério, Paulo Roberto, Gabryel Pereira, Leandro Kenji")
+    imagemcolaboradores = Image.open('C:/Users/Nathaen/Downloads/grupo.jpeg')
+    imagemtam = imagemcolaboradores.resize((1080,600))
+    imagemgrupo = ImageTk.PhotoImage(imagemtam,master=janelacreditos)
+    label = Label(janelacreditos,image=imagemgrupo)
+    textocreditos.pack()
+    textocreditos1.pack()
+    label.pack()
+    janelacreditos.mainloop()
+
+
+
+#Modelo a seguir:
+#elif pergunta == 8:
+#janela8 = tk.Tk()
+#janela8.title("Pergunta 2")
+#janela8.geometry('1366x768')
+#imagem2 = ImageTk.PhotoImage(file='C:/Users/Nathaen/Downloads/memeface1.png', master=janela8)
+#lbimagem1 = Label(janela8, image=imagem2)
+#lbimagem1.pack()
+#janela8.mainloop()
+
+
+##Botão de início
+
+button1 = tk.Button(janelaprincipal,text="Clique para começar!",command=firstbuttoncallback)
+button1.pack(ipadx=0,ipady=10)
+
+buttoncredits = tk.Button(janelaprincipal,text='Créditos',command=creditos)
+buttoncredits.pack(ipadx=600,ipady=10)
+
+
+
+
+
+
+
+janelaprincipal.mainloop()
+
+
