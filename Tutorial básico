@@ -1,0 +1,33 @@
+import tkinter
+import urllib
+import urllib.request
+import PIL
+import tkinter.ttk
+from tkinter.ttk import Label
+from PIL import Image,ImageTk
+
+def funcao():
+    print('Olá mundo!')
+
+##Comando para criar uma janela
+janela = tkinter.Tk()
+##Comando para dar título para a janela
+janela.title('fulano de tal')
+##Comando para ajustar a resolução da janela
+janela.geometry('1080x720')
+##Comando para ler o URL da imagem. (URL = link)
+urlimagem = urllib.request.urlopen('https://cdn-icons-png.flaticon.com/512/25/25231.png')
+##Comando para se ler a varíavel urlimagem e a por na janela
+imagem = ImageTk.PhotoImage(file=urlimagem, master=janela)
+##Comando para se mostrar a imagem
+imagemteste = Label(janela,image=imagem)
+##Comando para colocar a imagem na janela
+imagemteste.pack()
+
+##Comando para se criar um botão, a função aceita 3 parâmetros, (1° - em qual janela esse botão existirá),
+# (2° O texto escrito no botão),(3° - O comando do botão que é uma função.) 
+botao = tkinter.Button(janela,text='clique em mim!',command=funcao)
+##Comando para se colocar o botão na janela.
+botao.pack()
+##Comando para se mostrar a janela na tela.
+janela.mainloop()
