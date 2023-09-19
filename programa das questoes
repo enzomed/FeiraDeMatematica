@@ -1,0 +1,31 @@
+import random
+
+
+#lista de questoes e respostas
+questoes_respostas = [
+    ("qual e a capital do Brasil","brasilia"),
+    ("quantos planetas existem no sistema solar","Oito"),
+    ("Quem escreveu 'Dom Quixote'?","Miguel de Cervantes"),
+    ("Qual e o maior mamifero terrestre?","Elefante Africano"),
+    ("Que pintou a 'mona lisa'?","Leonardo da vinci"),
+    ("Qual e a formula quimica  da agua?","H2O"),
+    ("Quem foi o primeiro presidente dos Estados Unidos?","George washington"),
+    ("Quantos lados tem um Triangulo?","Tres")
+]
+
+#embaralhar as questoes
+random.shuffle(questoes_respostas)
+
+#funçao para fazer o quiz
+def fazer_quiz(questoes):
+    pontuacao = 0
+    for pergunta,resposta_correta in questoes:
+        resposta_usuario = input(pergunta +"")
+        if resposta_usuario.lower() == resposta_correta.lower():
+            print("Resposta correta!\n")
+        pontuaçao +=1
+    else:
+     print(f"resposta incorreta.A resposta correta e:{resposta_correta}\n")
+    print(f"sua pontuaçao final e:{pontuaçao}/{len(questoes)}")
+
+    #iniciar o quiz
