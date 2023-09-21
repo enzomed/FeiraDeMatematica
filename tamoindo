@@ -165,3 +165,18 @@ def pergunta1():
     button_8_5 = tk.Button(janela_8,text='E) Paulo',command=random.choice(perguntas7))
     button_8_5.pack()
     janela_8.mainloop()
+
+def errado1():
+    janela3 = tk.Tk()
+    janela3.title('errado1')
+    janela3.geometry('1366x768')
+    texto1 = Label(janela3, text='Sua resposta está incorreta!')
+
+    texto1.pack(ipadx=10,ipady=10)
+    urlimagem3 = urllib.request.urlopen('https://static.todamateria.com.br/upload/de/sv/desviopadraoexemplo1.jpg?auto_optimize=low')
+    img3 = ImageTk.PhotoImage(file=urlimagem3, master=janela3)
+    imagem3 = Label(janela3,image=img3)
+    imagem3.pack()
+    button4 = tk.Button(janela3,text='Clique para retornar a pergunta',command=(pergunta1))
+    button4.pack()
+    janela3.mainloop()
