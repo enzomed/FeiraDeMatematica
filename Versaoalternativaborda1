@@ -121,6 +121,7 @@ janela_principal.mainloop()
 
 ## Definição das questões
 lista = [4, 3, 2, 1]
+shuffle(lista)
 ultimoitem = lista[-1]
 print(lista)
 
@@ -181,17 +182,17 @@ for questao in lista:
             frame1.pack(padx=10, pady=10)
             frame1.place(x=48, y=598)
 
-            frame2 = tk.Frame(master=janelaultima, highlightbackground="orange", highlightthickness=8, height=45
+            frame2 = tk.Frame(master=janelaultima, highlightbackground="purple", highlightthickness=8, height=45
                               , width=162)
             frame2.pack(padx=10, pady=10)
             frame2.place(x=218, y=598)
 
-            frame3 = tk.Frame(master=janelaultima, highlightbackground="red", highlightthickness=8, height=45
+            frame3 = tk.Frame(master=janelaultima, highlightbackground="purple", highlightthickness=8, height=45
                               , width=164)
             frame3.pack(padx=10, pady=10)
             frame3.place(x=1018, y=598)
 
-            frame4 = tk.Frame(master=janelaultima, highlightbackground="blue", highlightthickness=8, height=45
+            frame4 = tk.Frame(master=janelaultima, highlightbackground="purple", highlightthickness=8, height=45
                               , width=164)
             frame4.pack(padx=10, pady=10)
             frame4.place(x=1188, y=598)
@@ -233,10 +234,27 @@ for questao in lista:
             urlimagem_1 = urllib.request.urlopen('https://i.postimg.cc/wjXDFLRx/imagem-questao1.png')
             img_1 = ImageTk.PhotoImage(file=urlimagem_1, master=janela1)
             imagem_1 = Label(janela1, image=img_1)
-            frame1 = tk.Frame(master=janela1, highlightbackground="red", highlightthickness=8, height=10
-                              , width=105)
+
+            frame1 = tk.Frame(master=janela1, highlightbackground="purple", highlightthickness=8, height=45
+                              , width=162)
             frame1.pack(padx=10, pady=10)
-            frame1.place(x=150, y=598)
+            frame1.place(x=48, y=598)
+
+            frame2 = tk.Frame(master=janela1, highlightbackground="purple", highlightthickness=8, height=45
+                              , width=162)
+            frame2.pack(padx=10, pady=10)
+            frame2.place(x=218, y=598)
+
+            frame3 = tk.Frame(master=janela1, highlightbackground="purple", highlightthickness=8, height=45
+                              , width=164)
+            frame3.pack(padx=10, pady=10)
+            frame3.place(x=1018, y=598)
+
+            frame4 = tk.Frame(master=janela1, highlightbackground="purple", highlightthickness=8, height=45
+                              , width=164)
+            frame4.pack(padx=10, pady=10)
+            frame4.place(x=1188, y=598)
+
             textoquestao = Label(janela1, text='A que corresponde a uma reflexão axial?',
                                  background='#111111',
                                  foreground='white',
@@ -267,11 +285,11 @@ for questao in lista:
             button_1.pack()
             button_1.place(x=50, y=600)
             button_2.pack()
-            button_2.place(x=200, y=600)
+            button_2.place(x=220, y=600)
             button_3.pack()
-            button_3.place(x=1050, y=600)
+            button_3.place(x=1020, y=600)
             button_4.pack()
-            button_4.place(x=1200, y=600)
+            button_4.place(x=1190, y=600)
             janela1.mainloop()
 
     if questao == 2:
@@ -323,6 +341,10 @@ for questao in lista:
             janelaultima.title('Pergunta 2')
             janelaultima.geometry('1366x768')
             janelaultima.configure(background='#111111')
+            frame1 = tk.Frame(master=janelaultima, highlightbackground="purple", highlightthickness=8, height=45
+                              , width=162)
+            frame1.pack(padx=10, pady=10)
+            frame1.place(x=48, y=598)
             urlimagem_1 = urllib.request.urlopen('https://i.postimg.cc/wvGwyqDY/quest-exer2.png')
             urlalternativa1 = urllib.request.urlopen('https://i.postimg.cc/zDwqCGJ8/ex2-1-red.png')
             urlalternativa2 = urllib.request.urlopen('https://i.postimg.cc/dVGxZLRK/ex2-2-red.png')
@@ -353,6 +375,27 @@ for questao in lista:
             janela2.title('Pergunta 2')
             janela2.geometry('1366x768')
             janela2.configure(background='#111111')
+
+            frame1 = tk.Frame(master=janela2, highlightbackground="purple", highlightthickness=8, height=45
+                              , width=162)
+            frame1.pack(padx=10, pady=10)
+            frame1.place(x=7, y=496)
+
+            frame2 = tk.Frame(master=janela2, highlightbackground="purple", highlightthickness=8, height=45
+                              , width=162)
+            frame2.pack(padx=10, pady=10)
+            frame2.place(x=218, y=598)
+
+            frame3 = tk.Frame(master=janela2, highlightbackground="purple", highlightthickness=8, height=45
+                              , width=164)
+            frame3.pack(padx=10, pady=10)
+            frame3.place(x=1018, y=598)
+
+            frame4 = tk.Frame(master=janela2, highlightbackground="purple", highlightthickness=8, height=45
+                              , width=164)
+            frame4.pack(padx=10, pady=10)
+            frame4.place(x=1188, y=598)
+
             urlimagem_1 = urllib.request.urlopen('https://i.postimg.cc/wvGwyqDY/quest-exer2.png')
             urlalternativa1 = urllib.request.urlopen('https://i.postimg.cc/zDwqCGJ8/ex2-1-red.png')
             urlalternativa2 = urllib.request.urlopen('https://i.postimg.cc/dVGxZLRK/ex2-2-red.png')
