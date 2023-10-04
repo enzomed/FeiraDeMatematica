@@ -341,10 +341,27 @@ for questao in lista:
             janelaultima.title('Pergunta 2')
             janelaultima.geometry('1366x768')
             janelaultima.configure(background='#111111')
-            frame1 = tk.Frame(master=janelaultima, highlightbackground="purple", highlightthickness=8, height=45
-                              , width=162)
+
+            frame1 = tk.Frame(master=janelaultima, highlightbackground="red", highlightthickness=8, height=162
+                              , width=262)
             frame1.pack(padx=10, pady=10)
-            frame1.place(x=48, y=598)
+            frame1.place(x=7, y=496)
+
+            frame2 = tk.Frame(master=janelaultima, highlightbackground="red", highlightthickness=8, height=162
+                              , width=262)
+            frame2.pack(padx=10, pady=10)
+            frame2.place(x=297, y=496)
+
+            frame3 = tk.Frame(master=janelaultima, highlightbackground="red", highlightthickness=8, height=162
+                              , width=262)
+            frame3.pack(padx=10, pady=10)
+            frame3.place(x=797, y=496)
+
+            frame4 = tk.Frame(master=janelaultima, highlightbackground="red", highlightthickness=8, height=162
+                              , width=262)
+            frame4.pack(padx=10, pady=10)
+            frame4.place(x=1097, y=496)
+
             urlimagem_1 = urllib.request.urlopen('https://i.postimg.cc/wvGwyqDY/quest-exer2.png')
             urlalternativa1 = urllib.request.urlopen('https://i.postimg.cc/zDwqCGJ8/ex2-1-red.png')
             urlalternativa2 = urllib.request.urlopen('https://i.postimg.cc/dVGxZLRK/ex2-2-red.png')
@@ -376,25 +393,25 @@ for questao in lista:
             janela2.geometry('1366x768')
             janela2.configure(background='#111111')
 
-            frame1 = tk.Frame(master=janela2, highlightbackground="purple", highlightthickness=8, height=45
-                              , width=162)
+            frame1 = tk.Frame(master=janela2, highlightbackground="red", highlightthickness=8, height=162
+                              , width=262)
             frame1.pack(padx=10, pady=10)
             frame1.place(x=7, y=496)
 
-            frame2 = tk.Frame(master=janela2, highlightbackground="purple", highlightthickness=8, height=45
-                              , width=162)
+            frame2 = tk.Frame(master=janela2, highlightbackground="red", highlightthickness=8, height=162
+                              , width=262)
             frame2.pack(padx=10, pady=10)
-            frame2.place(x=218, y=598)
+            frame2.place(x=297, y=496)
 
-            frame3 = tk.Frame(master=janela2, highlightbackground="purple", highlightthickness=8, height=45
-                              , width=164)
+            frame3 = tk.Frame(master=janela2, highlightbackground="red", highlightthickness=8, height=162
+                              , width=262)
             frame3.pack(padx=10, pady=10)
-            frame3.place(x=1018, y=598)
+            frame3.place(x=797, y=496)
 
-            frame4 = tk.Frame(master=janela2, highlightbackground="purple", highlightthickness=8, height=45
-                              , width=164)
+            frame4 = tk.Frame(master=janela2, highlightbackground="red", highlightthickness=8, height=162
+                              , width=262)
             frame4.pack(padx=10, pady=10)
-            frame4.place(x=1188, y=598)
+            frame4.place(x=1097, y=496)
 
             urlimagem_1 = urllib.request.urlopen('https://i.postimg.cc/wvGwyqDY/quest-exer2.png')
             urlalternativa1 = urllib.request.urlopen('https://i.postimg.cc/zDwqCGJ8/ex2-1-red.png')
@@ -462,6 +479,20 @@ for questao in lista:
             janelaultima.title('Última pergunta')
             janelaultima.geometry('1366x768')
             janelaultima.configure(background='#111111')
+
+            frame_3_1 = tk.Frame(master = janelaultima, highlightbackground="orange", highlightthickness=8, height=160, width=260)
+            frame_3_1.pack(padx=10, pady=10)
+            frame_3_1.place(x=48, y=448)
+            frame_3_2 = tk.Frame(master = janelaultima, highlightbackground="orange", highlightthickness=8, height=160, width=260)
+            frame_3_2.pack(padx=10, pady=10)
+            frame_3_2.place(x=348, y=448)
+            frame_3_3 = tk.Frame(master = janelaultima, highlightbackground="orange", highlightthickness=8, height=160, width=260)
+            frame_3_3.pack(padx=10, pady=10)
+            frame_3_3.place(x=698, y=448)
+            frame_3_1 = tk.Frame(master = janelaultima, highlightbackground="orange", highlightthickness=8, height=160, width=260)
+            frame_3_1.pack(padx=10, pady=10)
+            frame_3_1.place(x=998, y=448)
+
             urlimagem_1 = urllib.request.urlopen('https://i.postimg.cc/cCGbmzq6/quest-exer4.png')
             urlalternativa1 = urllib.request.urlopen('https://i.postimg.cc/0jyYGGth/ex4-1-red.png')
             urlalternativa2 = urllib.request.urlopen('https://i.postimg.cc/kGcDMkqb/ex4-2-red.png')
@@ -493,6 +524,20 @@ for questao in lista:
             janela3.title('Pergunta 3')
             janela3.geometry('1366x768')
             janela3.configure(background='#111111')
+
+            frame_3_1 = tk.Frame(master = janela3, highlightbackground="orange", highlightthickness=8, height=160, width=260)
+            frame_3_1.pack(padx=10, pady=10)
+            frame_3_1.place(x=48, y=448)
+            frame_3_2 = tk.Frame(master = janela3, highlightbackground="orange", highlightthickness=8, height=160, width=260)
+            frame_3_2.pack(padx=10, pady=10)
+            frame_3_2.place(x=348, y=448)
+            frame_3_3 = tk.Frame(master = janela3, highlightbackground="orange", highlightthickness=8, height=160, width=260)
+            frame_3_3.pack(padx=10, pady=10)
+            frame_3_3.place(x=698, y=448)
+            frame_3_1 = tk.Frame(master = janela3, highlightbackground="orange", highlightthickness=8, height=160, width=260)
+            frame_3_1.pack(padx=10, pady=10)
+            frame_3_1.place(x=998, y=448)
+
             urlimagem_1 = urllib.request.urlopen('https://i.postimg.cc/cCGbmzq6/quest-exer4.png')
             urlalternativa1 = urllib.request.urlopen('https://i.postimg.cc/0jyYGGth/ex4-1-red.png')
             urlalternativa2 = urllib.request.urlopen('https://i.postimg.cc/kGcDMkqb/ex4-2-red.png')
