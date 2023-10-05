@@ -1183,6 +1183,112 @@ for questao in lista:
             button_9_4.place(x=1100, y=500)
             janela9.mainloop()
 
+    if questao == 10:
+
+        def correcao():
+            janelacorrecao = tk.Tk()
+            janelacorrecao2 = tk.Tk()
+            janelacorrecao.title('Correção 1')
+            janelacorrecao2.title('Correção 2')
+            janelacorrecao.geometry('430x600')
+            janelacorrecao2.geometry('430x600')
+            janelacorrecao.configure(background='#111111')
+            janelacorrecao2.configure(background='#111111')
+            urlimagemcorrecao1 = urllib.request.urlopen('https://i.postimg.cc/52Gt796y/corre-rota-o-redimensionada.png')
+            urlimagemcorrecao2 = urllib.request.urlopen(
+                'https://i.postimg.cc/MKC1wdJm/corre-reflex-o-redimensionada.png')
+            imgcorrecao1 = ImageTk.PhotoImage(file=urlimagemcorrecao1, master=janelacorrecao)
+            imgcorrecao2 = ImageTk.PhotoImage(file=urlimagemcorrecao2, master=janelacorrecao2)
+            imagemcorrecao1 = Label(janelacorrecao, image=imgcorrecao1)
+            imagemcorrecao2 = Label(janelacorrecao2, image=imgcorrecao2)
+            imagemcorrecao1.pack()
+            imagemcorrecao2.pack()
+            janelacorrecao.mainloop()
+            janelacorrecao2.mainloop()
+
+
+        def perguntaerrada():
+            janelaerro = tk.Tk()
+            janelaerro.title('Você errou!')
+            janelaerro.geometry('200x200')
+            janelaerro.configure(background='#111111')
+            textoerro = Label(janelaerro, text='Sinto muito, você errou!',
+                              background='#111111',
+                              foreground='white',
+                              font=('Bebas Neue', 12)
+                              )
+            button = tk.Button(janelaerro, text='Saiba o porquê.', command=correcao,
+                               background='#111111',
+                               foreground='white',
+                               font=('Bebas Neue', 12)
+                               )
+            textoerro.pack()
+            button.pack()
+            janelaerro.mainloop()
+
+
+        if questao == ultimoitem:
+            janelaultima = tk.Tk()
+            janelaultima.title('Última questão')
+            janelaultima.geometry('1366x768')
+            janelaultima.configure(background='#111111')
+            urlimagem_1 = urllib.request.urlopen('https://i.postimg.cc/9FXHmn9m/quest-exer10.png')
+            urlalternativa10_1 = urllib.request.urlopen('https://i.postimg.cc/zDwqCGJ8/ex2-1-red.png')
+            urlalternativa10_2 = urllib.request.urlopen('https://i.postimg.cc/dVGxZLRK/ex2-2-red.png')
+            urlalternativa10_3 = urllib.request.urlopen('https://i.postimg.cc/Vk9KL21f/ex2-3-red.png')
+            urlalternativa10_4 = urllib.request.urlopen('https://i.postimg.cc/W3ynHvmn/ex2-4-red.png')
+            img_1 = ImageTk.PhotoImage(file=urlimagem_1, master=janelaultima)
+            imgal1 = ImageTk.PhotoImage(file=urlalternativa10_1, master=janelaultima)
+            imgal2 = ImageTk.PhotoImage(file=urlalternativa10_2, master=janelaultima)
+            imgal3 = ImageTk.PhotoImage(file=urlalternativa10_3, master=janelaultima)
+            imgal4 = ImageTk.PhotoImage(file=urlalternativa10_4, master=janelaultima)
+            imagem_1 = Label(janelaultima, image=img_1)
+            imagem_1.pack()
+            button_10_1 = tk.Button(janelaultima, image=imgal1, command=perguntaerrada)
+            button_10_2 = tk.Button(janelaultima, image=imgal2, command=perguntaerrada)
+            button_10_3 = tk.Button(janelaultima, image=imgal3, command=perguntaerrada)
+            button_10_4 = tk.Button(janelaultima, image=imgal4, command=janelaultima.destroy)
+            button_10_1.pack()
+            button_10_1.place(x=10, y=500)
+            button_10_2.pack()
+            button_10_2.place(x=300, y=500)
+            button_10_3.pack()
+            button_10_3.place(x=800, y=500)
+            button_10_4.pack()
+            button_10_4.place(x=1100, y=500)
+            janelaultima.mainloop()
+        else:
+            janela10 = tk.Tk()
+            janela10.title('Pergunta 10')
+            janela10.geometry('1366x768')
+            janela10.configure(background='#111111')
+            urlimagem_1 = urllib.request.urlopen('https://i.postimg.cc/9FXHmn9m/quest-exer10.png')
+            urlalternativa10_1 = urllib.request.urlopen('https://i.postimg.cc/zDwqCGJ8/ex2-1-red.png')
+            urlalternativa10_2 = urllib.request.urlopen('https://i.postimg.cc/dVGxZLRK/ex2-2-red.png')
+            urlalternativa10_3 = urllib.request.urlopen('https://i.postimg.cc/Vk9KL21f/ex2-3-red.png')
+            urlalternativa10_4 = urllib.request.urlopen('https://i.postimg.cc/W3ynHvmn/ex2-4-red.png')
+            img_1 = ImageTk.PhotoImage(file=urlimagem_1, master=janela10)
+            imgal1 = ImageTk.PhotoImage(file=urlalternativa10_1, master=janela10)
+            imgal2 = ImageTk.PhotoImage(file=urlalternativa10_2, master=janela10)
+            imgal3 = ImageTk.PhotoImage(file=urlalternativa10_3, master=janela10)
+            imgal4 = ImageTk.PhotoImage(file=urlalternativa10_4, master=janela10)
+            imagem_1 = Label(janela10, image=img_1)
+            imagem_1.pack()
+            button_10_1 = tk.Button(janela10, image=imgal1, command=perguntaerrada)
+            button_10_2 = tk.Button(janela10, image=imgal2, command=perguntaerrada)
+            button_10_3 = tk.Button(janela10, image=imgal3, command=perguntaerrada)
+            button_10_4 = tk.Button(janela10, image=imgal4, command=janela10.destroy)
+            button_10_1.pack()
+            button_10_1.place(x=10, y=500)
+            button_10_2.pack()
+            button_10_2.place(x=300, y=500)
+            button_10_3.pack()
+            button_10_3.place(x=800, y=500)
+            button_10_4.pack()
+            button_10_4.place(x=1100, y=500)
+            janela10.mainloop()
+
+
 def gabarito():
     janelagabarito = tk.Tk()
     janelagabarito.geometry('800x800')
