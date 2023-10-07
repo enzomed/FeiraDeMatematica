@@ -1016,6 +1016,9 @@ for questao in lista:
             img_1 = ImageTk.PhotoImage(file=urlimagem_1, master=janelaultima)
             imagem_1 = Label(janelaultima, image=img_1)
             imagem_1.pack()
+            frame_8= tk.Frame(master='janelaultima', highlightbackground="blue", highlightthickness=8, height=454, width=610)
+            frame_8.pack(padx=10, pady=10)
+            frame_8.place(x=379, y=0)
             button_8_1 = tk.Button(janelaultima, text='A) Sentido Anti-horário e 90°', command=perguntaerrada,
                                     background='#111111',
                                     foreground='white',
@@ -1054,6 +1057,9 @@ for questao in lista:
             janela8.configure(background='#111111')
             urlimagem_1 = urllib.request.urlopen('https://i.postimg.cc/m2SZV9YD/quest-exer8.png')
             img_1 = ImageTk.PhotoImage(file=urlimagem_1, master=janela8)
+            frame_8= tk.Frame(master='janela8', highlightbackground="blue", highlightthickness=8, height=454, width=610)
+            frame_8.pack(padx=10, pady=10)
+            frame_8.place(x=379, y=0)
             button_8_1 = tk.Button(janela8, text='A) Sentido Anti-horário e 90°', command=perguntaerrada,
                                     background='#111111',
                                     foreground='white',
