@@ -670,16 +670,24 @@ for questao in lista:
             janelaultima.title('Última questão')
             janelaultima.geometry('1366x768')
             janelaultima.configure(background='#111111')
-            urlalternativa1 = urllib.request.urlopen('https://i.postimg.cc/fbt1gMnf/ex3-un.png')
-            imgal1 = ImageTk.PhotoImage(file=urlalternativa1, master=janelaultima)
-            imagemalternativa1 = Label(janelaultima, image=imgal1)
+
+            urlalternativa_4 = urllib.request.urlopen('https://i.postimg.cc/fbt1gMnf/ex3-un.png')
+            imgal1 = ImageTk.PhotoImage(file=urlalternativa_4, master=janelaultima)
+            imagemalternativa4 = Button(janelaultima, image=imgal1)
+            imagemalternativa4.configure(background='blue', border=3)
             textoquestao4 = Label(janelaultima,
                                       text='Descreva qual transformação geométrica foi realizada para essa figura.',
                                       background='#111111',
                                       foreground='white',
                                       font=('Bebas Neue', 20)
                                       )
-            resposta1 = tk.Entry(janelaultima)
+            resposta1 = tk.Entry(janelaultima, bd=3)
+            buttonenter_1 = tk.Button(janelaultima, text='Verificar',
+                                        background='#111111',
+                                        foreground='white',
+                                        font=('Bebas Neue', 16),
+                                        command=answer, bg='blue', bd=5
+                                        )
             buttonenter = tk.Button(janelaultima, text='Verificar',
                                         background='#111111',
                                         foreground='white',
@@ -687,9 +695,13 @@ for questao in lista:
                                         command=answer
                                         )
             textoquestao4.pack()
-            imagemalternativa1.pack()
+            imagemalternativa4.pack()
             resposta1.pack()
+            resposta1.place(x=618, y=500)
+            buttonenter_1.pack()
+            buttonenter_1.place(x=632, y=533)
             buttonenter.pack()
+            buttonenter.place(x=634, y=535)
             janelaultima.mainloop()
 
         else:
@@ -697,16 +709,24 @@ for questao in lista:
             janela4.title('Pergunta 4')
             janela4.geometry('1366x768')
             janela4.configure(background='#111111')
-            urlalternativa1 = urllib.request.urlopen('https://i.postimg.cc/fbt1gMnf/ex3-un.png')
-            imgal1 = ImageTk.PhotoImage(file=urlalternativa1, master=janela4)
-            imagemalternativa1 = Label(janela4, image=imgal1)
+
+            urlalternativa_4 = urllib.request.urlopen('https://i.postimg.cc/fbt1gMnf/ex3-un.png')
+            imgal1 = ImageTk.PhotoImage(file=urlalternativa_4, master=janela4)
+            imagemalternativa4 = Button(janela4, image=imgal1)
+            imagemalternativa4.configure(background='blue', border=3)
             textoquestao4 = Label(janela4,
                                       text='Descreva qual transformação geométrica foi realizada para essa figura.',
                                       background='#111111',
                                       foreground='white',
                                       font=('Bebas Neue', 20)
                                       )
-            resposta1 = tk.Entry(janela4)
+            resposta1 = tk.Entry(janela4, bd=3)
+            buttonenter_1 = tk.Button(janela4, text='Verificar',
+                                        background='#111111',
+                                        foreground='white',
+                                        font=('Bebas Neue', 16),
+                                        command=answer, bg='blue', bd=5
+                                        )
             buttonenter = tk.Button(janela4, text='Verificar',
                                         background='#111111',
                                         foreground='white',
@@ -714,9 +734,13 @@ for questao in lista:
                                         command=answer
                                         )
             textoquestao4.pack()
-            imagemalternativa1.pack()
+            imagemalternativa4.pack()
             resposta1.pack()
+            resposta1.place(x=618, y=500)
+            buttonenter_1.pack()
+            buttonenter_1.place(x=632, y=533)
             buttonenter.pack()
+            buttonenter.place(x=634, y=535)
             janela4.mainloop()
 
     if questao == 5:
