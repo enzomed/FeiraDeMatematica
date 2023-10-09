@@ -190,7 +190,7 @@ for questao in lista:
             urlimagem = urllib.request.urlopen('https://i.postimg.cc/wjXDFLRx/imagem-questao1.png')
             img = ImageTk.PhotoImage(file=urlimagem, master=janelaultima)
             imagem = Button(janelaultima, image=img)
-            imagem.configure(background='purple', border='10')
+            imagem.configure(background='purple', border='7')
             imagem.pack()
             textoquestaoultima.pack()
 
@@ -198,7 +198,7 @@ for questao in lista:
                                  background='purple',
                                  foreground='white',
                                  font=('Bebas Neue', 16),
-                                 border='10'
+                                 border='7'
                                  )
             button_1 = tk.Button(janelaultima, text='A) É a figura 3.', command=perguntaerrada,
                                  background='#111111',
@@ -209,7 +209,7 @@ for questao in lista:
                                  background='purple',
                                  foreground='white',
                                  font=('Bebas Neue', 16),
-                                 border='10'
+                                 border='7'
                                  )
             button_2 = tk.Button(janelaultima, text='B) É a figura 1.', command=perguntaerrada,
                                  background='#111111',
@@ -220,7 +220,7 @@ for questao in lista:
                                  background='purple',
                                  foreground='white',
                                  font=('Bebas Neue', 16),
-                                 border='10'
+                                 border='7'
                                  )
             button_3 = tk.Button(janelaultima, text='C) É a figura 4.', command=perguntaerrada,
                                  background='#111111',
@@ -231,7 +231,7 @@ for questao in lista:
                                  background='purple',
                                  foreground='white',
                                  font=('Bebas Neue', 16),
-                                 border='10'
+                                 border='7'
                                  )
             button_4 = tk.Button(janelaultima, text='D) É a figura 2.', command=janelaultima.destroy,
                                  background='#111111',
@@ -241,19 +241,19 @@ for questao in lista:
             button_1_1.pack()
             button_1_1.place(x=50, y=600)
             button_1.pack()
-            button_1.place(x=58, y=608)
+            button_1.place(x=54, y=604)
             button_2_1.pack()
             button_2_1.place(x=220, y=600)
             button_2.pack()
-            button_2.place(x=228, y=608)
+            button_2.place(x=224, y=604)
             button_3_1.pack()
             button_3_1.place(x=1020, y=600)
             button_3.pack()
-            button_3.place(x=1028, y=608)
+            button_3.place(x=1024, y=604)
             button_4_1.pack()
             button_4_1.place(x=1190, y=600)
             button_4.pack()
-            button_4.place(x=1198, y=608)
+            button_4.place(x=1194, y=604)
             janelaultima.mainloop()
         else:
             janela1 = tk.Tk()
@@ -263,7 +263,7 @@ for questao in lista:
             urlimagem_1 = urllib.request.urlopen('https://i.postimg.cc/wjXDFLRx/imagem-questao1.png')
             img_1 = ImageTk.PhotoImage(file=urlimagem_1, master=janela1)
             imagem_1 = Button(janela1, image=img_1)
-            imagem_1.configure(background='purple', border='10')
+            imagem_1.configure(background='purple', border='7')
             textoquestao = Label(janela1, text='A figura que corresponde a uma reflexão axial:',
                                  background='#111111',
                                  foreground='white',
@@ -276,7 +276,7 @@ for questao in lista:
                                  background='purple',
                                  foreground='white',
                                  font=('Bebas Neue', 16),
-                                 border='10'
+                                 border='7'
                                  )
             button_1 = tk.Button(janela1, text='A) É a figura 3.', command=perguntaerrada,
                                  background='#111111',
@@ -287,7 +287,7 @@ for questao in lista:
                                  background='purple',
                                  foreground='white',
                                  font=('Bebas Neue', 16),
-                                 border='10'
+                                 border='7'
                                  )
             button_2 = tk.Button(janela1, text='B) É a figura 1.', command=perguntaerrada,
                                  background='#111111',
@@ -298,7 +298,7 @@ for questao in lista:
                                  background='purple',
                                  foreground='white',
                                  font=('Bebas Neue', 16),
-                                 border='10'
+                                 border='7'
                                  )
             button_3 = tk.Button(janela1, text='C) É a figura 4.', command=perguntaerrada,
                                  background='#111111',
@@ -309,7 +309,7 @@ for questao in lista:
                                  background='purple',
                                  foreground='white',
                                  font=('Bebas Neue', 16),
-                                 border='10'
+                                 border='7'
                                  )
             button_4 = tk.Button(janela1, text='D) É a figura 2.', command=janela1.destroy,
                                  background='#111111',
@@ -319,19 +319,19 @@ for questao in lista:
             button_1_1.pack()
             button_1_1.place(x=50, y=600)
             button_1.pack()
-            button_1.place(x=58, y=608)
+            button_1.place(x=54, y=604)
             button_2_1.pack()
             button_2_1.place(x=220, y=600)
             button_2.pack()
-            button_2.place(x=228, y=608)
+            button_2.place(x=224, y=604)
             button_3_1.pack()
             button_3_1.place(x=1020, y=600)
             button_3.pack()
-            button_3.place(x=1028, y=608)
+            button_3.place(x=1024, y=604)
             button_4_1.pack()
             button_4_1.place(x=1190, y=600)
             button_4.pack()
-            button_4.place(x=1198, y=608)
+            button_4.place(x=1194, y=604)
             janela1.mainloop()
 
     if questao == 2:
@@ -793,25 +793,38 @@ for questao in lista:
             janelaultima.title('Última questão')
             janelaultima.geometry('1366x768')
             janelaultima.configure(background='#111111')
+
+            urlalternativa_5 = urllib.request.urlopen('https://i.postimg.cc/NMSmYyDL/ex3-un-2.png')
+            imgal1 = ImageTk.PhotoImage(file=urlalternativa_5, master=janelaultima)
+            imagemalternativa5 = Button(janelaultima, image=imgal1)
+            imagemalternativa5.configure(background='purple', border=3)
             textoquestao = Label(janelaultima,
                                      text='Descreva qual transformação geométrica foi realizada nessa figura:',
                                      background='#111111',
                                      foreground='white',
                                      font=('Bebas Neue', 20)
                                      )
+            resposta1 = tk.Entry(janelaultima, bd=3)
+            buttonenter_5 = tk.Button(janelaultima, text='Verificar',
+                                        background='#111111',
+                                        foreground='white',
+                                        font=('Bebas Neue', 16),
+                                        command=answer, bg='purple', bd=5
+                                        )
             buttonenter = tk.Button(janelaultima, text='Verificar',
                                         background='#111111',
                                         foreground='white',
                                         font=('Bebas Neue', 16),
-                                        command=answer)
-            urlenunciado = urllib.request.urlopen('https://i.postimg.cc/NMSmYyDL/ex3-un-2.png')
-            imgenunciado = ImageTk.PhotoImage(file=urlenunciado, master=janelaultima)
-            imagemenunciado = Label(janelaultima, image=imgenunciado)
-            resposta = tk.Entry(janelaultima)
+                                        command=answer
+                                        )
             textoquestao.pack()
-            imagemenunciado.pack()
-            resposta.pack()
+            imagemalternativa5.pack()
+            resposta1.pack()
+            resposta1.place(x=618, y=500)
+            buttonenter_5.pack()
+            buttonenter_5.place(x=632, y=533)
             buttonenter.pack()
+            buttonenter.place(x=634, y=535)
             janelaultima.mainloop()
 
         else:
@@ -819,24 +832,37 @@ for questao in lista:
             janela5.title('Pergunta 5')
             janela5.geometry('1366x768')
             janela5.configure(background='#111111')
+            urlalternativa_5 = urllib.request.urlopen('https://i.postimg.cc/NMSmYyDL/ex3-un-2.png')
+            imgal1 = ImageTk.PhotoImage(file=urlalternativa_5, master=janela5)
+            imagemalternativa5 = Button(janela5, image=imgal1)
+            imagemalternativa5.configure(background='purple', border=3)
+
             textoquestao = Label(janela5, text='Descreva qual transformação geométrica foi realizada nessa figura:',
                                      background='#111111',
                                      foreground='white',
                                      font=('Bebas Neue', 20)
                                      )
+            resposta1 = tk.Entry(janela5, bd=3)
+            buttonenter_5 = tk.Button(janela5, text='Verificar',
+                                        background='#111111',
+                                        foreground='white',
+                                        font=('Bebas Neue', 16),
+                                        command=answer, bg='purple', bd=5
+                                        )
             buttonenter = tk.Button(janela5, text='Verificar',
                                         background='#111111',
                                         foreground='white',
                                         font=('Bebas Neue', 16),
-                                        command=answer)
-            urlenunciado = urllib.request.urlopen('https://i.postimg.cc/NMSmYyDL/ex3-un-2.png')
-            imgenunciado = ImageTk.PhotoImage(file=urlenunciado, master=janela5)
-            imagemenunciado = Label(janela5, image=imgenunciado)
-            resposta = tk.Entry(janela5)
+                                        command=answer
+                                        )
             textoquestao.pack()
-            imagemenunciado.pack()
-            resposta.pack()
+            imagemalternativa5.pack()
+            resposta1.pack()
+            resposta1.place(x=618, y=500)
+            buttonenter_5.pack()
+            buttonenter_5.place(x=632, y=533)
             buttonenter.pack()
+            buttonenter.place(x=634, y=535)
             janela5.mainloop()
 
     if questao == 6:
@@ -1084,14 +1110,14 @@ for questao in lista:
             urlimagem_quest8 = urllib.request.urlopen('https://i.postimg.cc/m2SZV9YD/quest-exer8.png')
             img_8 = ImageTk.PhotoImage(file=urlimagem_quest8, master=janelaultima)
             imagem_8 = Button(janelaultima, image=img_8)
-            imagem_8.configure(background='blue', border='10')
+            imagem_8.configure(background='blue', border='7')
             imagem_8.pack()
 
             button_8_1_1 = tk.Button(janelaultima, text='A) Sentido Anti-horário e 90°', command=perguntaerrada,
                                     background='blue',
                                     foreground='white',
                                     font=('Bebas Neue', 16),
-                                    border='10' 
+                                    border='7' 
                                 )
             button_8_1 = tk.Button(janelaultima, text='A) Sentido Anti-horário e 90°', command=perguntaerrada,
                                     background='#111111',
@@ -1102,7 +1128,7 @@ for questao in lista:
                                     background='blue',
                                     foreground='white',
                                     font=('Bebas Neue', 16),
-                                    border='10'
+                                    border='7'
                                 )
             button_8_2 = tk.Button(janelaultima, text='B) Sentido Horário e 100°', command=perguntaerrada,
                                     background='#111111',
@@ -1113,7 +1139,7 @@ for questao in lista:
                                     background='blue',
                                     foreground='white',
                                     font=('Bebas Neue', 16),
-                                    border='10'
+                                    border='7'
                                 )
             button_8_3 = tk.Button(janelaultima, text='C) Sentido Horário e 45°', command=janelaultima.destroy,
                                     background='#111111',
@@ -1124,7 +1150,7 @@ for questao in lista:
                                     background='blue',
                                     foreground='white',
                                     font=('Bebas Neue', 16),
-                                    border='10'
+                                    border='7'
                                 )
             button_8_4 = tk.Button(janelaultima, text='D) Sentido Anti-horário e 60°', command=perguntaerrada,
                                     background='#111111',
@@ -1134,19 +1160,19 @@ for questao in lista:
             button_8_1_1.pack()
             button_8_1_1.place(x=10, y=550)
             button_8_1.pack()
-            button_8_1.place(x=18, y=558)
+            button_8_1.place(x=14, y=554)
             button_8_2_1.pack()
             button_8_2_1.place(x=383, y=550)
             button_8_2.pack()
-            button_8_2.place(x=391, y=558)
+            button_8_2.place(x=387, y=554)
             button_8_3_1.pack()
-            button_8_3_1.place(x=790, y=550)
+            button_8_3_1.place(x=770, y=550)
             button_8_3.pack()            
-            button_8_3.place(x=798, y=558)
+            button_8_3.place(x=774, y=554)
             button_8_4_1.pack()
-            button_8_4_1.place(x=1100, y=550)
+            button_8_4_1.place(x=1065, y=550)
             button_8_4.pack()
-            button_8_4.place(x=1108, y=558)
+            button_8_4.place(x=1069, y=554)
             janelaultima.mainloop()
         else:
             janela8 = tk.Tk()
@@ -1156,14 +1182,14 @@ for questao in lista:
             urlimagem_quest8 = urllib.request.urlopen('https://i.postimg.cc/m2SZV9YD/quest-exer8.png')
             img_8 = ImageTk.PhotoImage(file=urlimagem_quest8, master=janela8)
             imagem_8 = Button(janela8, image=img_8)
-            imagem_8.configure(background='blue', border='10')
+            imagem_8.configure(background='blue', border='7')
             imagem_8.pack()
 
             button_8_1_1 = tk.Button(janela8, text='A) Sentido Anti-horário e 90°', command=perguntaerrada,
                                     background='blue',
                                     foreground='white',
                                     font=('Bebas Neue', 16),
-                                    border='10' 
+                                    border='7' 
                                 )
             button_8_1 = tk.Button(janela8, text='A) Sentido Anti-horário e 90°', command=perguntaerrada,
                                     background='#111111',
@@ -1174,7 +1200,7 @@ for questao in lista:
                                     background='blue',
                                     foreground='white',
                                     font=('Bebas Neue', 16),
-                                    border='10'
+                                    border='7'
                                 )
             button_8_2 = tk.Button(janela8, text='B) Sentido Horário e 100°', command=perguntaerrada,
                                     background='#111111',
@@ -1185,7 +1211,7 @@ for questao in lista:
                                     background='blue',
                                     foreground='white',
                                     font=('Bebas Neue', 16),
-                                    border='10'
+                                    border='7'
                                 )
             button_8_3 = tk.Button(janela8, text='C) Sentido Horário e 45°', command=janela8.destroy,
                                     background='#111111',
@@ -1196,7 +1222,7 @@ for questao in lista:
                                     background='blue',
                                     foreground='white',
                                     font=('Bebas Neue', 16),
-                                    border='10'
+                                    border='7'
                                 )
             button_8_4 = tk.Button(janela8, text='D) Sentido Anti-horário e 60°', command=perguntaerrada,
                                     background='#111111',
@@ -1206,19 +1232,19 @@ for questao in lista:
             button_8_1_1.pack()
             button_8_1_1.place(x=40, y=550)
             button_8_1.pack()
-            button_8_1.place(x=48, y=558)
+            button_8_1.place(x=44, y=558)
             button_8_2_1.pack()
             button_8_2_1.place(x=383, y=550)
             button_8_2.pack()
-            button_8_2.place(x=391, y=558)
+            button_8_2.place(x=387, y=558)
             button_8_3_1.pack()
             button_8_3_1.place(x=790, y=550)
             button_8_3.pack()            
-            button_8_3.place(x=798, y=558)
+            button_8_3.place(x=794, y=558)
             button_8_4_1.pack()
             button_8_4_1.place(x=1100, y=550)
             button_8_4.pack()
-            button_8_4.place(x=1108, y=558)
+            button_8_4.place(x=1104, y=558)
             janela8.mainloop()
 
     if questao == 9:
