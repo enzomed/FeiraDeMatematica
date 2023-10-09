@@ -1421,9 +1421,9 @@ for questao in lista:
             button_10_2.pack()
             button_10_2.place(x=300, y=500)
             button_10_3.pack()
-            button_10_3.place(x=800, y=500)
+            button_10_3.place(x=790, y=500)
             button_10_4.pack()
-            button_10_4.place(x=1100, y=500)
+            button_10_4.place(x=1090, y=500)
             janelaultima.mainloop()
         else:
             janela10 = tk.Tk()
@@ -1457,9 +1457,9 @@ for questao in lista:
             button_10_2.pack()
             button_10_2.place(x=300, y=500)
             button_10_3.pack()
-            button_10_3.place(x=800, y=500)
+            button_10_3.place(x=790, y=500)
             button_10_4.pack()
-            button_10_4.place(x=1100, y=500)
+            button_10_4.place(x=1090, y=500)
             janela10.mainloop()
 
 def gabarito():
