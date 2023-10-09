@@ -1445,7 +1445,7 @@ for questao in lista:
             imagem_10.configure(background='red', border='7')
             imagem_10.pack()
             button_10_1 = tk.Button(janela10, image=imgal1, command=perguntaerrada)
-            button_10_1.configure(background='red', border='10')
+            button_10_1.configure(background='red', border='7')
             button_10_2 = tk.Button(janela10, image=imgal2, command=janela10.destroy)
             button_10_2.configure(background='red', border='7')
             button_10_3 = tk.Button(janela10, image=imgal3, command=perguntaerrada)
