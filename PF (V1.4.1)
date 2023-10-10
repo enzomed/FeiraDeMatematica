@@ -999,40 +999,71 @@ for questao in lista:
             janelaultima.geometry('1366x768')
             janelaultima.title('Última questão')
             janelaultima.configure(background='#111111')
-            textointro = Label(janelaultima, text='Para formar um coração, a figura precisa:',
-                                   background='#111111',
-                                   foreground='white',
-                                   font=('Bebas Neue', 18)
-                                   )
-            urlimagemenunciado = urllib.request.urlopen('https://i.postimg.cc/tCCPwLG1/ex-7.png')
+            urlimagemenunciado = urllib.request.urlopen('https://i.postimg.cc/J0QVR10Q/quest-exer7.png')
             imgenunciado = ImageTk.PhotoImage(file=urlimagemenunciado, master=janelaultima)
-            imagemenunciado = Label(janelaultima, image=imgenunciado)
+            imagemenunciado = Button(janelaultima, image=imgenunciado)
+            imagemenunciado.configure(bg='orange', bd=5)
+            button_1_7 = tk.Button(janelaultima, text='A) Sofrer uma reflexão no eixo x.',
+                                     background='orange',
+                                     foreground='white',
+                                     font=('Bebas Neue', 18),
+                                     command=perguntaerrada,
+                                     bd=7)
             button_1 = tk.Button(janelaultima, text='A) Sofrer uma reflexão no eixo x.',
                                      background='#111111',
                                      foreground='white',
                                      font=('Bebas Neue', 18),
                                      command=perguntaerrada)
+            button_2_7 = tk.Button(janelaultima, text='B) Sofrer uma rotação no eixo y.',
+                                     background='orange',
+                                     foreground='white',
+                                     font=('Bebas Neue', 18),
+                                     command=perguntaerrada,
+                                     bd=7)
             button_2 = tk.Button(janelaultima, text='B) Sofrer uma rotação no eixo y.',
                                      background='#111111',
                                      foreground='white',
                                      font=('Bebas Neue', 18),
                                      command=perguntaerrada)
+            button_3_7 = tk.Button(janelaultima, text='C) Sofrer uma rotação no eixo x.',
+                                     background='orange',
+                                     foreground='white',
+                                     font=('Bebas Neue', 18),
+                                     command=perguntaerrada,
+                                     bd=7)
             button_3 = tk.Button(janelaultima, text='C) Sofrer uma rotação no eixo x.',
                                      background='#111111',
                                      foreground='white',
                                      font=('Bebas Neue', 18),
                                      command=perguntaerrada)
+            button_4_7 = tk.Button(janelaultima, text='D) Sofrer uma reflexão no eixo y.',
+                                     background='orange',
+                                     foreground='white',
+                                     font=('Bebas Neue', 18),
+                                     command=janelaultima.destroy,
+                                     bd=7)
             button_4 = tk.Button(janelaultima, text='D) Sofrer uma reflexão no eixo y.',
                                      background='#111111',
                                      foreground='white',
                                      font=('Bebas Neue', 18),
                                      command=janelaultima.destroy)
-            textointro.pack()
             imagemenunciado.pack()
             button_1.pack()
+            button_1_7.pack()
+            button_1.place(x=274, y=504)
+            button_1_7.place(x=270, y=500)
             button_2.pack()
+            button_2_7.pack()
+            button_2.place(x=274, y=604)
+            button_2_7.place(x=270, y=600)
             button_3.pack()
+            button_3_7.pack()
+            button_3.place(x=804, y=504)
+            button_3_7.place(x=800, y=500)
             button_4.pack()
+            button_4_7.pack()
+            button_4.place(x=804, y=604)
+            button_4_7.place(x=800, y=600)
             janelaultima.mainloop()
         else:
             janela7 = tk.Tk()
@@ -1041,22 +1072,47 @@ for questao in lista:
             janela7.configure(background='#111111')
             urlimagemenunciado = urllib.request.urlopen('https://i.postimg.cc/J0QVR10Q/quest-exer7.png')
             imgenunciado = ImageTk.PhotoImage(file=urlimagemenunciado, master=janela7)
-            imagemenunciado = Label(janela7, image=imgenunciado)
+            imagemenunciado = Button(janela7, image=imgenunciado)
+            imagemenunciado.configure(bg='orange', bd=5)
+            button_1_7 = tk.Button(janela7, text='A) Sofrer uma reflexão no eixo x.',
+                                     background='orange',
+                                     foreground='white',
+                                     font=('Bebas Neue', 18),
+                                     command=perguntaerrada,
+                                     bd=7)
             button_1 = tk.Button(janela7, text='A) Sofrer uma reflexão no eixo x.',
                                      background='#111111',
                                      foreground='white',
                                      font=('Bebas Neue', 18),
                                      command=perguntaerrada)
+            button_2_7 = tk.Button(janela7, text='B) Sofrer uma rotação no eixo y.',
+                                     background='orange',
+                                     foreground='white',
+                                     font=('Bebas Neue', 18),
+                                     command=perguntaerrada,
+                                     bd=7)
             button_2 = tk.Button(janela7, text='B) Sofrer uma rotação no eixo y.',
                                      background='#111111',
                                      foreground='white',
                                      font=('Bebas Neue', 18),
                                      command=perguntaerrada)
+            button_3_7 = tk.Button(janela7, text='C) Sofrer uma rotação no eixo x.',
+                                     background='orange',
+                                     foreground='white',
+                                     font=('Bebas Neue', 18),
+                                     command=perguntaerrada,
+                                     bd=7)
             button_3 = tk.Button(janela7, text='C) Sofrer uma rotação no eixo x.',
                                      background='#111111',
                                      foreground='white',
                                      font=('Bebas Neue', 18),
                                      command=perguntaerrada)
+            button_4_7 = tk.Button(janela7, text='D) Sofrer uma reflexão no eixo y.',
+                                     background='orange',
+                                     foreground='white',
+                                     font=('Bebas Neue', 18),
+                                     command=janela7.destroy,
+                                     bd=7)
             button_4 = tk.Button(janela7, text='D) Sofrer uma reflexão no eixo y.',
                                      background='#111111',
                                      foreground='white',
@@ -1064,9 +1120,21 @@ for questao in lista:
                                      command=janela7.destroy)
             imagemenunciado.pack()
             button_1.pack()
+            button_1_7.pack()
+            button_1.place(x=274, y=504)
+            button_1_7.place(x=270, y=500)
             button_2.pack()
+            button_2_7.pack()
+            button_2.place(x=274, y=604)
+            button_2_7.place(x=270, y=600)
             button_3.pack()
+            button_3_7.pack()
+            button_3.place(x=804, y=504)
+            button_3_7.place(x=800, y=500)
             button_4.pack()
+            button_4_7.pack()
+            button_4.place(x=804, y=604)
+            button_4_7.place(x=800, y=600)
             janela7.mainloop()
 
     if questao == 8:
