@@ -923,8 +923,14 @@ for questao in lista:
                                      )
             urlimagemenunciado = urllib.request.urlopen('https://i.postimg.cc/R04qbdgV/ex3-un-3.png')
             imgenunciado = ImageTk.PhotoImage(file=urlimagemenunciado, master=janelaultima)
-            imagemenunciado = Label(janelaultima, image=imgenunciado)
-            resposta = tk.Entry(janelaultima)
+            imagemenunciado = Button(janelaultima, image=imgenunciado)
+            imagemenunciado .configure(background= "red", border= 5)
+            resposta = tk.Entry(janelaultima, bd=3)
+            buttonenter_1=tk.Button(janelaultima, text='Verificar',
+                                        background='red',
+                                        foreground='white',
+                                        font=('Bebas Neue', 16),
+                                        command=answer, bd=5)
             buttonenter = tk.Button(janelaultima, text='Verificar',
                                         background='#111111',
                                         foreground='white',
@@ -933,7 +939,11 @@ for questao in lista:
             textoquestao.pack()
             imagemenunciado.pack()
             resposta.pack()
+            resposta.place(x=618, y=500)
             buttonenter.pack()
+            buttonenter.place(x=634, y=535)
+            buttonenter_1.pack()
+            buttonenter_1.place(x=632, y=533)
             janelaultima.mainloop()
         else:
             janela6 = tk.Tk()
@@ -947,8 +957,14 @@ for questao in lista:
                                      )
             urlimagemenunciado = urllib.request.urlopen('https://i.postimg.cc/R04qbdgV/ex3-un-3.png')
             imgenunciado = ImageTk.PhotoImage(file=urlimagemenunciado, master=janela6)
-            imagemenunciado = Label(janela6, image=imgenunciado)
-            resposta = tk.Entry(janela6)
+            imagemenunciado = Button(janela6, image=imgenunciado)
+            imagemenunciado .configure(background= "red", border= 5)
+            resposta = tk.Entry(janela6, bd=3)
+            buttonenter_1 = tk.Button(janela6, text='Verificar',
+                                        background='red',
+                                        foreground='white',
+                                        font=('Bebas Neue', 16),
+                                        command=answer, bd=5)
             buttonenter = tk.Button(janela6, text='Verificar',
                                         background='#111111',
                                         foreground='white',
@@ -957,7 +973,11 @@ for questao in lista:
             textoquestao.pack()
             imagemenunciado.pack()
             resposta.pack()
+            resposta.place(x=618, y=500)
+            buttonenter_1.pack()
+            buttonenter_1.place(x=632, y=533)
             buttonenter.pack()
+            buttonenter.place(x=634, y=535)
             janela6.mainloop()
 
     if questao == 7:
