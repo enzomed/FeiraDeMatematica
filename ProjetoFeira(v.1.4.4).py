@@ -2061,8 +2061,9 @@ for questao in lista:
 
 
 def gabarito():
+    janelapergunta.destroy()
     janelagabarito = tk.Tk()
-    janelagabarito.geometry('800x800')
+    janelagabarito.geometry('600x400')
     janelagabarito.title('Gabarito')
     janelagabarito.configure(background='#111111')
     gabar= Label(janelagabarito, text='1) Alternativa correta: D',
@@ -2104,9 +2105,10 @@ def gabarito():
     gabar10= Label(janelagabarito, text='10) Alternativa correta: 2',
                    background='#111111', font=('Bebas Neue', 16),
                    foreground='white')
-    gabar10.pack(padx=10, pady=10)    
+    gabar10.pack(padx=10, pady=10)
 
 def perguntagabarito():
+    global janelapergunta
     janelapergunta = tk.Tk()
     janelapergunta.title('Gabarito')
     janelapergunta.geometry('200x200')
@@ -2151,6 +2153,34 @@ def saveinfo():
 
 
 def scoreboard():
+
+    def erasetext():
+        maintext.delete('1.0',END)
+
+    def alphabeticorder():
+        datalist = data.items()
+        sorteddatalist = sorted(datalist)
+        maintext.tag_configure("center", justify='center')
+        for item in sorteddatalist:
+            maintext.insert(tk.END,(str(item)+'\n'),"center")
+        maintext.pack()
+
+    def highestvalueorder():
+        datalist = data.items()
+        numbersorteddatalist = sorted(datalist,key=lambda x: x[1],reverse=True)
+        maintext.tag_configure("center", justify='center')
+        for item in numbersorteddatalist:
+            maintext.insert(tk.END,(str(item)+'\n'),"center")
+        maintext.pack()
+
+    def lowestvalueorder():
+        datalist = data.items()
+        numbersorteddatalist = sorted(datalist, key=lambda x: x[1])
+        maintext.tag_configure("center", justify='center')
+        for item in numbersorteddatalist:
+            maintext.insert(tk.END, (str(item) + '\n'), "center")
+        maintext.pack()
+
     qload.destroy()
     with open('playerdata.json','r') as file:
         data = json.load(file)
@@ -2171,7 +2201,21 @@ def scoreboard():
         maintext.tag_configure("center",justify='center')
         for item in data.items():
             maintext.insert(tk.END, str(item) + '\n',"center")
+
+        alphabeticorderbutton = tk.Button(scorewindow,text='Ordem alfabética',background="#111111",
+                                          foreground='white',font=('Bebas Neue',15),command=lambda:[erasetext(),alphabeticorder()])
+        highestvaluebutton = tk.Button(scorewindow,text='Ordem decrescente',background='#111111',
+                                       foreground='white',font=('Bebas Neue',15),command=lambda:[erasetext(),highestvalueorder()])
+        lowestvaluebutton = tk.Button(scorewindow,text='Ordem crescente',background="#111111",
+                                      foreground='white',font=('Bebas Neue',15),command=lambda:[erasetext(),lowestvalueorder()])
+
         maintext.pack()
+        alphabeticorderbutton.pack()
+        highestvaluebutton.pack()
+        lowestvaluebutton.pack()
+        alphabeticorderbutton.place(x=1000,y=50)
+        highestvaluebutton.place(x=1000,y=100)
+        lowestvaluebutton.place(x=1000,y=150)
         scrollbar.config(command=maintext.yview)
         scorewindow.mainloop()
 
@@ -2215,24 +2259,22 @@ qload.mainloop()
 
 
 
-# Última função a serem executada no programa:
+# Última parte do programa:
 # Função encerramento: Agradecendo aos participantes do questionário:
-def encerramento():
-    janelaagradecimentos = tk.Tk()
-    janelaagradecimentos.title('Obrigado!')
-    janelaagradecimentos.geometry('300x300')
-    janelaagradecimentos.configure(background='#111111')
 
-    textoagradecimento = Label(janelaagradecimentos, text='Obrigado por participar deste questionário!',
+janelaagradecimentos = tk.Tk()
+janelaagradecimentos.title('Obrigado!')
+janelaagradecimentos.geometry('300x300')
+janelaagradecimentos.configure(background='#111111')
+
+textoagradecimento = Label(janelaagradecimentos, text='Obrigado por participar deste questionário!',
                                background='#111111',
                                foreground='white',
                                font=('Bebas Neue', 12))
-    botaoencerramento = tk.Button(janelaagradecimentos, text='Clique para encerrar o questionário!', command=exit,
+botaoencerramento = tk.Button(janelaagradecimentos, text='Clique para encerrar o questionário!', command=exit,
                                   background='#111111',
                                   foreground='white',
                                   font=('Bebas Neue', 12))
-    textoagradecimento.pack()
-    botaoencerramento.pack()
-    janelaagradecimentos.mainloop()
-
-encerramento()
+textoagradecimento.pack()
+botaoencerramento.pack()
+janelaagradecimentos.mainloop()
