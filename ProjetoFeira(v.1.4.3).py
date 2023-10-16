@@ -2065,7 +2065,46 @@ def gabarito():
     janelagabarito.geometry('800x800')
     janelagabarito.title('Gabarito')
     janelagabarito.configure(background='#111111')
-
+    gabar= Label(janelagabarito, text='1) Alternativa correta: D',
+                 background='#111111', font=('Bebas Neue', 16),
+                 foreground='white')
+    gabar.pack(padx=10, pady=10)
+    gabar2= Label(janelagabarito, text='2) Alternativa correta: 4',
+                  background='#111111', font=('Bebas Neue', 16),
+                  foreground='white')
+    gabar2.pack(padx=10, pady=10)
+    gabar3= Label(janelagabarito, text='3) Alternativa correta: 1',
+                  background='#111111', font=('Bebas Neue', 16),
+                  foreground='white')
+    gabar3.pack(padx=10, pady=10)
+    gabar4= Label(janelagabarito, text='4) Texto correto: "Reflexão"',
+                  background='#111111', font=('Bebas Neue', 16),
+                  foreground='white')
+    gabar4.pack(padx=10, pady=10)
+    gabar5= Label(janelagabarito, text='5) Texto correto: "Translação"',
+                  background='#111111', font=('Bebas Neue', 16),
+                  foreground='white')
+    gabar5.pack(padx=10, pady=10)
+    gabar6= Label(janelagabarito, text='6) Texto correto: "Rotação"',
+                  background='#111111', font=('Bebas Neue', 16),
+                  foreground='white')
+    gabar6.pack(padx=10, pady=10)
+    gabar7= Label(janelagabarito, text='7) Alternativa correta: D',
+                  background='#111111', font=('Bebas Neue', 16),
+                  foreground='white')
+    gabar7.pack(padx=10, pady=10)
+    gabar8= Label(janelagabarito, text='8) Alternativa correta: C',
+                  background='#111111', font=('Bebas Neue', 16),
+                  foreground='white')
+    gabar8.pack(padx=10, pady=10)
+    gabar9= Label(janelagabarito, text='9) Alternativa correta: B',
+                  background='#111111', font=('Bebas Neue', 16),
+                  foreground='white')
+    gabar9.pack(padx=10, pady=10)
+    gabar10= Label(janelagabarito, text='10) Alternativa correta: 2',
+                   background='#111111', font=('Bebas Neue', 16),
+                   foreground='white')
+    gabar10.pack(padx=10, pady=10)    
 
 def perguntagabarito():
     janelapergunta = tk.Tk()
