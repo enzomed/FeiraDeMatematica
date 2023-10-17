@@ -37,85 +37,136 @@ def gameover():
 
 
 
-## Devidos créditos a equipe de propaganda:
-
-def creditospropaganda():
-    creditos_propaganda = tk.Tk()
-    creditos_propaganda.title('Créditos')
-    creditos_propaganda.geometry('1366x768')
-    creditos_propaganda.configure(background='#111111')
-    textocreditos = Label(creditos_propaganda, text='Equipe responsável pela propaganda da feira:')
-    botaoencerrar = tk.Button(creditos_propaganda, text='Sair', command=creditos_propaganda.destroy)
-    textocreditos.pack()
-    botaoencerrar.pack()
-
 ## Devidos créditos a equipe que criou as perguntas:
 
 def creditosperguntas():
+    global creditos_perguntas
     creditos_perguntas = tk.Tk()
     creditos_perguntas.title('Créditos das perguntas')
     creditos_perguntas.geometry('1366x768')
     creditos_perguntas.configure(background='#111111')
     textocreditos = Label(creditos_perguntas,
-                          text='Equipe responsável pela criação das perguntas: Vitórias, Patrine, Rafael, Maisa, Pedro, Arthur, Sarah ',
+                          text='Equipe responsável pela criação das perguntas:',
                           background='#111111',
                           foreground='white',
                           font=('Bebas Neue', 16)
                           )
+    textocreditos.pack()
+    textocreditos1 = Label(creditos_perguntas,
+                          text='Vitórias, Patrine, Rafael, Maisa, Pedro, Arthur, Sarah',
+                          background='#111111',
+                          foreground='white',
+                          font=('Bebas Neue', 16)
+                          )
+    textocreditos1.pack()
     botaoproxcred = tk.Button(creditos_perguntas, text='Próxima equipe', command=creditospropaganda,
                               background='#111111',
                               foreground='white',
                               font=('Bebas Neue', 16)
                               )
-    creditos_perguntas.after(30000, creditos_perguntas.destroy)
-    textocreditos.pack()
+    creditos_perguntas.after(15000, creditos_perguntas.destroy)
     botaoproxcred.pack()
 
 
 ## Devidos créditos a equipe das imagens:
 
 def creditosimagens():
+    global creditos_imagens
     creditos_imagens = tk.Tk()
     creditos_imagens.title('Créditos das imagens')
     creditos_imagens.geometry('1366x768')
     creditos_imagens.configure(background='#111111')
-    textocreditos = Label(creditos_imagens, text='Equipe das imagens: Juliana, Yasmin, Matheus, Nicolas, Miguel',
+    textocreditos = Label(creditos_imagens, text='Equipe das imagens:',
                           background='#111111',
                           foreground='white',
                           font=('Bebas Neue', 16)
                           )
+    textocreditos.pack()
+    textocreditos1 = Label(creditos_imagens, text='Juliana, Yasmin, Matheus, Nicolas, Miguel',
+                          background='#111111',
+                          foreground='white',
+                          font=('Bebas Neue', 16)
+                          )
+    textocreditos1.pack()
     botaoproxcred = tk.Button(creditos_imagens, text='Próxima equipe', command=creditosperguntas,
                               background='#111111',
                               foreground='white',
                               font=('Bebas Neue', 16)
                               )
-    creditos_imagens.after(30000, creditos_imagens.destroy)
-    textocreditos.pack()
+    creditos_imagens.after(15000, creditos_imagens.destroy)
     botaoproxcred.pack()
 
 
 ## Devidos créditos a equipe de programação:
 
 def creditosprogramadores():
+    global creditos_programadores
     creditos_programadores = tk.Tk()
     creditos_programadores.title('Equipe responsável pela modelagem e criação do código para o programa.')
     creditos_programadores.geometry('1366x768')
     creditos_programadores.configure(background='#111111')
     textocreditos = Label(creditos_programadores,
-                          text='Equipe de programação: Enzo Fernandes, Kleber Rogério, Gabryel Pereira, Leandro Kenji, Paulo Roberto,',
+                          text='Equipe de programação:',
                           background='#111111',
                           foreground='white',
                           font=('Bebas Neue', 16)
                           )
+    textocreditos.pack()
+    textocreditos1 = Label(creditos_programadores,
+                          text='Enzo Fernandes, Kleber, Gabryel, Leandro',
+                          background='#111111',
+                          foreground='white',
+                          font=('Bebas Neue', 16)
+                          )
+    textocreditos1.pack()
+    textocreditos2 = Label(creditos_programadores,
+                          text='Paulo, Everson, Erbson, Larissa',
+                          background='#111111',
+                          foreground='white',
+                          font=('Bebas Neue', 16)
+                          )
+    textocreditos2.pack()
     botaoproxcred = tk.Button(creditos_programadores, text='Próxima equipe', command=creditosimagens,
                               background='#111111',
                               foreground='white',
                               font=('Bebas Neue', 16),
                               )
-    creditos_programadores.after(30000, creditos_programadores.destroy)
-    textocreditos.pack()
+    creditos_programadores.after(15000, creditos_programadores.destroy)
     botaoproxcred.pack()
 
+## Devidos créditos a equipe de propaganda:
+
+def creditospropaganda():
+    global creditos_propaganda
+    creditos_propaganda = tk.Tk()
+    creditos_propaganda.title('Créditos')
+    creditos_propaganda.geometry('1366x768')
+    creditos_propaganda.configure(background='#111111')
+    textocreditos = Label(creditos_propaganda, text='Equipe responsável pela propaganda da feira:',
+                          background='#111111',
+                          foreground='white',
+                          font=('Bebas Neue', 16)
+                          )
+    textocreditos.pack()
+    textocreditos1 = Label(creditos_propaganda, text='Diogo, Gabriel, Aryane, Marj, Gustavo',
+                          background='#111111',
+                          foreground='white',
+                          font=('Bebas Neue', 16)
+                          )
+    textocreditos1.pack()
+    textocreditos2 = Label(creditos_propaganda, text='Abilio, Klaiver, Geovanna, Thaina, Julia',
+                          background='#111111',
+                          foreground='white',
+                          font=('Bebas Neue', 16)
+                          )
+    textocreditos2.pack()
+    textofinal = Label(creditos_propaganda, text='Aguarde 15 segundos para as janelas fecharem.',
+                          background='#111111',
+                          foreground='white',
+                          font=('Bebas Neue', 16)
+                          )
+    creditos_propaganda.after(15000, creditos_propaganda.destroy)
+    textofinal.pack()
 
 ## Definiçao da classe Jogador:
 
