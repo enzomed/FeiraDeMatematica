@@ -11,6 +11,7 @@ import random
 from random import shuffle
 import json
 import pynput
+import sys
 
 ## Função do gameover, somente chamada quando o jogador perde todas as vidas.
 ## Neste caso, o jogador é obrigado a fechar o programa.
@@ -203,7 +204,7 @@ botaoencerrar = tk.Button(janela_principal, text='Clique para encerrar o program
                           background="#111111",
                           foreground="white",
                           font=("Bebas Neue", 16),
-                          command=exit)
+                          command=sys.exit)
 textointro = Label(janela_principal, text='Bem vindo ao Projeto da Feira de Matemática!',
                    background="#111111",
                    foreground="white",
@@ -2322,7 +2323,7 @@ textoagradecimento = Label(janelaagradecimentos, text='Obrigado por participar d
                                background='#111111',
                                foreground='white',
                                font=('Bebas Neue', 12))
-botaoencerramento = tk.Button(janelaagradecimentos, text='Clique para encerrar o questionário!', command=exit,
+botaoencerramento = tk.Button(janelaagradecimentos, text='Clique para encerrar o questionário!', command=sys.exit,
                                   background='#111111',
                                   foreground='white',
                                   font=('Bebas Neue', 12))
