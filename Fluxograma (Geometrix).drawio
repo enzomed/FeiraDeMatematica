@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-10-25T01:54:10.159Z" agent="Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0" etag="k7XvA334D5qCBA8sVrWU" version="22.0.7" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-25T01:56:25.797Z" agent="Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0" etag="JeflTfHQkc8Ha7e9xIXY" version="22.0.7" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1035" dy="520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -106,10 +106,10 @@
             <mxPoint x="1026" y="1160" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="uaOrWUwennGpa3zISX---31" value="Acertou a questão?" style="rhombus;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="uaOrWUwennGpa3zISX---31" value="O usuário acertou a questão?" style="rhombus;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="535" y="1169" width="150" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="uaOrWUwennGpa3zISX---32" value="Acertou a questão?" style="rhombus;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="uaOrWUwennGpa3zISX---32" value="O usuário acertou a questão?" style="rhombus;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="950" y="1169" width="150" height="80" as="geometry" />
         </mxCell>
         <mxCell id="uaOrWUwennGpa3zISX---33" value="" style="endArrow=classic;html=1;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" edge="1">
@@ -155,7 +155,7 @@
             <mxPoint x="704.5" y="1459" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="uaOrWUwennGpa3zISX---44" value="Acabou as vidas?" style="rhombus;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="uaOrWUwennGpa3zISX---44" value="Acabou as vidas do jogador?" style="rhombus;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="630" y="1469" width="150" height="80" as="geometry" />
         </mxCell>
         <mxCell id="uaOrWUwennGpa3zISX---45" value="" style="endArrow=classic;html=1;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" edge="1">
@@ -269,7 +269,7 @@
             <mxPoint x="1124.5" y="1460" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="uaOrWUwennGpa3zISX---76" value="Acabou as vidas?" style="rhombus;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="uaOrWUwennGpa3zISX---76" value="Acabou as vidas do jogador?" style="rhombus;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="1050" y="1470" width="150" height="80" as="geometry" />
         </mxCell>
         <mxCell id="uaOrWUwennGpa3zISX---77" value="" style="endArrow=classic;html=1;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" edge="1">
