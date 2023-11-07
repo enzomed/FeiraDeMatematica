@@ -12,7 +12,9 @@ from random import shuffle
 import json
 import pynput
 import sys
-from pytube import youtube
+import vlc
+import time
+
 
 
 ## Função do gameover, somente chamada quando o jogador perde todas as vidas.
@@ -253,15 +255,26 @@ def scoreboard():
         scrollbar.config(command=maintext.yview)
         scorewindow.mainloop()
 
-## Tutorial 
+## Janela com Tutorial 
 
-def tutorial()
+def tutorial():
 
-    YouTube('https://youtu.be/9bZkp7q19f0').streams.first().download()
-    yt = YouTube('http://youtube.com/watch?v=9bZkp7q19f0')
-    yt.streams
-    yt.filter(progressive=True, file_extension='mp4')
-    yt.order_by('600x400')
+    video_url = 'https://youtu.be/B07mDSQE_jg'
+    instance = vlc.Instance()
+    media = instance.media_new(video_url)
+    player = instance.media_player_new()
+    player.set_media(media)
+    
+    player.set_xwindow(video_frame.winfo_id())
+    player.play()
+    time.sleep(1)
+    
+    janela_tutorial = tk.Tk()
+    janela_tutorial.title('Tutorial')
+    janela_tutorial.geometry('800x650')
+    video_frame = tk.Frame(janela_tutorial)
+    video_frame.pack()
+    janela_tutorial.pack()
 
 ## Janela principal:
 
@@ -316,6 +329,7 @@ botaocreditos.place(x=465, y=508)
 botaopontuacao.pack(pady=5, side="right")
 botaopontuacao.place(x=788, y=508)
 botaoencerrar.pack(pady=8)
+botaotutorial.pack()
 janela_principal.configure(bg='#111111')
 janela_principal.mainloop()
 
