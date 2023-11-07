@@ -2,6 +2,8 @@ import tkinter as tk
 from tkinter import messagebox
 import time
 from threading import Thread
+import threading
+import sys
 
 def timer():
 
@@ -12,15 +14,12 @@ def timer():
     timerwindow.configure(background="#111111")
     timerwindow.resizable(False, False)
 
-    varminutes = tk.StringVar()
-    varseconds = tk.StringVar()
-
     alert = tk.Label(timerwindow, text='Tempo restante:', font=("Bebas Neue", 15), background="#111111",
                      foreground='white')
-    minutes = tk.Entry(timerwindow, textvariable=varminutes, width=3, background="#111111", font=("Bebas Neue", 20),
+    minutes = tk.Entry(timerwindow, width=3, background="#111111", font=("Bebas Neue", 20),
                        fg="#D0312D")
     sep = tk.Label(timerwindow, text=":", font=('Bebas Neue', 20), background="#111111", fg="#FFFFFF")
-    seconds = tk.Entry(timerwindow, textvariable=varseconds, width=3, background="#111111", font=("Bebas Neue", 20),
+    seconds = tk.Entry(timerwindow, width=3, background="#111111", font=("Bebas Neue", 20),
                        fg="#D0312D")
 
     alert.pack()
@@ -39,35 +38,21 @@ def timer():
     '''A variável loop é incrementada (acresida de uma unidade) toda vez que 1 minuto se passa.
        É a variável responsável por ajustar o ponteiro dos minutos.'''
 
-    while loop <= 3:
+    for variableminutes in reversed(range(0,2)):
+        
+        print(variableminutes)
 
-        if loop == 0:
-            minute = 2
-            varminutes = minute
-            textminute = minutes.insert(tk.END, str('0' + str(varminutes)))
-            timerwindow.update()
+        if variableminutes <= 10:
 
-        elif loop == 1:
-            minutes.delete(0, tk.END)
-            minute = 1
-            varminutes = minute
-            textminute = minutes.insert(tk.END, str('0' + str(varminutes)))
+            textminute = minutes.insert(tk.END,str('0'+str(variableminutes)))
             timerwindow.update()
+            variableminutes = variableminutes - 1
 
-        elif loop == 2:
-            minutes.delete(0, tk.END)
-            minute = 0
-            varminutes = minute
-            textminute = minutes.insert(tk.END, str('0' + str(varminutes)))
-            timerwindow.update()
+        if variableminutes > 10:
 
-        elif loop == 3:
-            minutes.delete(varminutes, tk.END)
-            seconds.delete(varseconds, tk.END)
+            textminute = minutes.insert(tk.END,str(variableminutes))
             timerwindow.update()
-            timesup = tk.messagebox.showinfo('Fim de jogo!', 'O tempo acabou!')
-            time.sleep(3)
-            timerwindow.destroy()
+            variableminutes = variableminutes - 1
 
 
 
@@ -90,9 +75,16 @@ def timer():
                 '''Quando o ponteiro dos segundos der 0, o loop será incrementado.'''
 
                 if second == 0:
-                    print('before loop update: {}'.format(loop))
-                    loop = loop + 1
-                    print('after loop update: {}'.format(loop))
+
+                    seconds.delete(0,tk.END)
+                    minutes.delete(0,tk.END)
+
+                    if variableminutes == -1:
+                        minutes.delete(0,tk.END)
+                        print('timer event is cleared.')
+                        timerevent.clear()
+                        time.sleep(2)
+                        sys.exit()
 
 
             else:
@@ -107,4 +99,12 @@ def timer():
 
     timerwindow.mainloop()
 
-timer()
+timerthread = threading.Thread(target=timer)
+timerevent = threading.Event()
+
+timerevent.set()
+print('timer event is set!')
+if timerevent.is_set():
+    timerthread.start()
+if timerevent.clear() == True:
+    sys.exit()
