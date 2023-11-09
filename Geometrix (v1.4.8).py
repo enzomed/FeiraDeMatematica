@@ -13,68 +13,9 @@ from random import shuffle
 import json
 import pynput
 import sys
-import vlc
 import webbrowser
 import time
 from pytube import YouTube
-
-
-## Função do gameover, somente chamada quando o jogador perde todas as vidas.
-## Neste caso, o jogador é obrigado a fechar o programa.
-
-def feira_overview():
-
-    def photo2():
-        if imgphoto2.getboolean(s=False) == False:
-            nextbutton.place(x=500, y=30)
-            previousbutton.pack()
-            previousbutton.place(x=700, y=30)
-            imgphoto1.destroy()
-            imgphoto2.pack()
-            imgphoto2.place(x=300,y=80)
-        else:
-            imgphoto2.getboolean(s=True)
-
-    def photo1():
-        if imgphoto2.getboolean(s=True) == True:
-            nextbutton.place(x=500, y=30)
-            previousbutton.destroy()
-            imgphoto2.destroy()
-            imgphoto1.pack()
-            imgphoto1.place(x=300, y=80)
-
-
-
-
-    feira_overview_window = tk.Tk()
-    feira_overview_window.geometry('1366x768')
-    feira_overview_window.configure(background='#111111')
-
-    textlabel = Label(feira_overview_window,text='Aqui está uma galeria de fotos de como foi a Feira de Matemática na escola E.E PEI Francisco Antunes Filho.',
-                      background='#111111',foreground='white',font=('Bebas Neue',17))
-    url_photo1 = urllib.request.urlopen('https://i.postimg.cc/Vvg5Dbb6/IMG-20231027-1.png')
-    url_photo2 = urllib.request.urlopen('https://i.postimg.cc/852P4m5N/IMG-20231027.png')
-    #url_photo3 = urllib.request.urlopen('')
-
-    nextbutton = tk.Button(feira_overview_window,text='Próxima foto',background='#111111',foreground='white',font=('Bebas Neue',17),command=lambda:[imgphoto2.getboolean(s=False),photo2()])
-    previousbutton = tk.Button(feira_overview_window,text='Foto anterior',background='#111111',foreground='white',font=('Bebas Neue',17),command=photo1())
-
-    textlabel.pack()
-    nextbutton.pack()
-    imagephoto1 = ImageTk.PhotoImage(master=feira_overview_window,file=url_photo1)
-    imagephoto2 = ImageTk.PhotoImage(master=feira_overview_window,file=url_photo2)
-    imgphoto1 = Label(feira_overview_window,image=imagephoto1)
-    imgphoto2 = Label(feira_overview_window,image=imagephoto2)
-    imgphoto1.pack()
-    imgphoto1.place(x=300,y=80)
-
-    feira_overview_window.mainloop()
-
-
-
-
-
-
 
 def disable_event():
     pass
@@ -363,8 +304,6 @@ botaoencerrar = tk.Button(janela_principal, text='Clique para encerrar o Geometr
                           foreground="white",
                           font=("Bebas Neue", 17),
                           command=sys.exit, bd=5)
-botao_feira = tk.Button(janela_principal,text='Galeria da feira',background='#111111',
-                        foreground='white',font=('Bebas Neue',17),command=feira_overview, bd=5)
 botaotutorial = tk.Button(janela_principal, text='Clique para abrir o Tutorial.',
                           background="#111111",
                           foreground="white",
@@ -382,8 +321,6 @@ imagemtitulo.pack(pady=10)
 textointro.pack(pady=5)
 textosubintro.pack(pady=5)
 botaoinicio.pack(pady=25)
-botao_feira.pack(pady=5)
-botao_feira.place(x=108,y=558)
 botaocreditos.pack(pady=5, side="left")
 botaocreditos.place(x=465, y=508)
 botaopontuacao.pack(pady=5, side="right")
@@ -751,7 +688,7 @@ for questao in lista:
             if jogador.vidas == 0:
                 if questao == ultimoitem:
                     janelaultima.destroy()
-                elif questao == 1:
+                elif questao == 2:
                     janela2.destroy()
                 gameover()
             else:
@@ -931,7 +868,7 @@ for questao in lista:
             if jogador.vidas == 0:
                 if questao == ultimoitem:
                     janelaultima.destroy()
-                elif questao == 1:
+                elif questao == 3:
                     janela3.destroy()
                 gameover()
             else:
@@ -1112,7 +1049,7 @@ for questao in lista:
             if jogador.vidas == 0:
                 if questao == ultimoitem:
                     janelaultima.destroy()
-                elif questao == 1:
+                elif questao == 4:
                     janela4.destroy()
                 gameover()
             else:
@@ -1272,7 +1209,7 @@ for questao in lista:
             if jogador.vidas == 0:
                 if questao == ultimoitem:
                     janelaultima.destroy()
-                elif questao == 1:
+                elif questao == 5:
                     janela5.destroy()
                 gameover()
             else:
@@ -1431,7 +1368,7 @@ for questao in lista:
             if jogador.vidas == 0:
                 if questao == ultimoitem:
                     janelaultima.destroy()
-                elif questao == 1:
+                elif questao == 6:
                     janela6.destroy()
                 gameover()
             else:
@@ -1585,7 +1522,7 @@ for questao in lista:
             if jogador.vidas == 0:
                 if questao == ultimoitem:
                     janelaultima.destroy()
-                elif questao == 1:
+                elif questao == 7:
                     janela7.destroy()
                 gameover()
             else:
@@ -1803,7 +1740,7 @@ for questao in lista:
             if jogador.vidas == 0:
                 if questao == ultimoitem:
                     janelaultima.destroy()
-                elif questao == 1:
+                elif questao == 8:
                     janela8.destroy()
                 gameover()
             else:
@@ -2023,7 +1960,7 @@ for questao in lista:
             if jogador.vidas == 0:
                 if questao == ultimoitem:
                     janelaultima.destroy()
-                elif questao == 1:
+                elif questao == 9:
                     janela9.destroy()
                 gameover()
             else:
@@ -2245,7 +2182,7 @@ for questao in lista:
             if jogador.vidas == 0:
                 if questao == ultimoitem:
                     janelaultima.destroy()
-                elif questao == 1:
+                elif questao == 10:
                     janela10.destroy()
                 gameover()
             else:
